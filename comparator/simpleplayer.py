@@ -5,7 +5,11 @@ from player import Player
 
 
 class SimplePlayer(Player):
-    
+    def __init__(self, name, p=0.3):
+        super().__init__(name)
+        self.p = p
+
+
     ### player's simple strategy
     def putCard(self, declared_card):
         
@@ -22,4 +26,4 @@ class SimplePlayer(Player):
     
     def checkCard(self, opponent_declaration):
         if opponent_declaration in self.cards: return True
-        return np.random.choice([True, False], p=[0.3, 0.7])
+        return np.random.choice([True, False], p=[self.p, 1-self.p])
