@@ -6,7 +6,7 @@ from player import Player
 
 class Hybiak(Player):
 
-    def __init__(self, name, p85=0.85, p80=0.80, p75=0.75, p70=0.70, p60=0.60, p50=0.50):
+    def __init__(self, name, p85=0.47907664597847205, p80=0.7842101613160066, p75=0.9905509218884401, p70=0.8299590024202209, p60=0.652454048449193, p50=0.6567827654562042):
         super().__init__(name)
         self.moves_counter = 0
         self.played_cards = [] # TODO update -> na podstawie dobierania kart przez przeciwnika?
